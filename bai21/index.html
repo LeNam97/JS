@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <p id="ketqua"></p>
+    <script type="text/javascript" async defer>
+        // sort(); sắp xếp mảng theo thứ tự alphabet A->Z
+        // reverse():sắp xếp đảo ngược thứ tự phần tử mảng Z->A
+        // Math.max.apply(null,arr): tìm giá trị lớn nhất có trong mảng.
+        // Math.min.applt(null,arr): tìm giá trị nhỏ nhất có trong mảng.
+        // sắp xếp mảng các đối tượng có thuộc tính riêng.
+
+        var friends = ["Dung", "Hoa", "Trang", "Hang"];
+        var numbers = [18, 35, 12, 11, -54, 98];
+
+        var objects = [{
+            name: "Nam",
+            age: 31
+        }, {
+            name: "Cao",
+            age: 21
+        }, {
+            name: "Hung",
+            age: 51
+        }, {
+            name: "Toan",
+            age: 81
+        }, {
+            name: "Tin",
+            age: 91
+        }];
+
+        friends.sort(); //- > chỉ sử dụng khi mảng là ký tự
+        friends.reverse();
+
+        numbers.sort(function(a, b) {
+            return a - b;
+        });
+        //-> sử dụng khi mảng là số.
+        numbers.reverse(function(a, b) {
+            return a - b;
+        });
+        var maxNumber = Math.max.apply(null, numbers);
+        var minNumber = Math.min.apply(null, numbers);
+        //document.getElementById("ketqua").innerHTML = minNumber;
+
+        objects.sort(function(a, b) {
+            return a.age - b.age;
+        }); //-> chỉ thực hiện khi kết quả trả ra giá trị lớn hơn 0.
+        objects.reverse(function(a, b) {
+            return a.age - b.age;
+        }); //-> chỉ thực hiện khi kết quả trả ra giá trị lớn hơn 0.
+
+        objects.sort(function(a, b) {
+            var name1 = a.name.toLocaleLowerCase(); //-> đưa chuỗi về dạng chữ thướng sau đó mới só sánh.
+            var name2 = b.name.toLocaleLowerCase();
+            if (name1 < name2) {
+                return -1;
+            }
+            if (name1 > name2) {
+                return 1;
+            }
+            return 0;
+
+        });
+        objects.reverse(function(a, b) {
+            var name1 = a.name.toLocaleLowerCase();
+            var name2 = b.name.toLocaleLowerCase();
+            if (name1 < name2) {
+                return -1;
+            }
+            if (name1 > name2) {
+                return 1;
+            }
+            return 0;
+
+        });
+
+        document.getElementById("ketqua").innerHTML =
+            objects[0].name + ", " + objects[0].age + "<br>" +
+            objects[1].name + ", " + objects[1].age + "<br>" +
+            objects[2].name + ", " + objects[2].age + "<br>" +
+            objects[3].name + ", " + objects[3].age + "<br>" +
+            objects[4].name + ", " + objects[4].age + "<br>";
+    </script>
+</body>
+
+</html>

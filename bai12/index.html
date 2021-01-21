@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 12 JavaScript</title>
+</head>
+
+<body>
+    <h3>Kết quả</h3>
+    <p id="ketqua"></p>
+
+    <script type="text/javascript">
+        var person = {
+            firstName = "Le",
+            lastName = "Nam",
+            age = 25,
+        }
+
+        person.fullName = person.firstName + ' ' + person.lastName;
+        var x = 'lastName';
+        document.getElementById("ketqua").innerHTML = person.fullName + ' ' + person['age'];
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS function</title>
+</head>
+<body>
+    <h3>JS Function</h3>
+    <p id="say"></p>
+    <p id="say2"></p>
+    <script type="text/javascript">
+        var a = 100;
+        var b = 255;
+        var sum = sumOfAAndB(a,b);
+        function sumOfAAndB(a,b){
+            var x = a + b;
+            return x;
+        }
+
+        function sumOfArray(start, end){
+            var sum =0;
+            for(var i = start; i <= end; i++){
+                sum += i;
+            }
+            return sum;
+        }
+
+        function sayHello(message, name){
+            var say = message + " " + name;
+            return say;
+        }
+        var message = "Good morning";
+        var message2 = "Good night";
+        var person = " Cao Thùy Dung";
+        var person2 =" Lê Phương Nam"
+
+        document.getElementById("say").innerHTML = sayHello(message,person);
+        document.getElementById("say2").innerHTML = sayHello(message2,person2);
+    </script>
+</body>
+</html>

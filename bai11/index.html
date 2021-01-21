@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 11 JavaScript</title>
+</head>
+<body>
+  <h3>Kết quả</h3>
+  <p id="ketqua"></p>
+
+  <script type="text/javascript">
+        // Objects trong JS
+  	var person = {
+    	firstName: "Le",
+      lastName: "Nam",
+      age: 23,
+      gender: "Male",
+			address: "Ha Noi",
+			simle: function(){
+				return "Hahaha...";
+			},
+			goToSchool:function(){
+				return "By Bus";
+			},
+			eatBreakFirst:function(){
+				return "Very Quickly!";
+			},
+			fullName: function(){
+				return this.firstName+ " " + this.lastName;  
+			}
+		}
+		person.firstName = "Cao";
+		person.lastName = "Dung";
+		document.getElementById("ketqua").innerHTML = person.fullName();
+
+
+  </script>
+</body>
+</html>

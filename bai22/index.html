@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--
+			find(): trả về giá trị đầu tiên trong các phần tử mảng thỏa mãn điều kiện cho trước.
+			
+			findIndex(): trả về chỉ số phần tử đầu tiên của các mảng thỏa mãn điều kiện cho trước,-> trả ra chỉ số (vị trí trong mảng)
+			
+      some(): kiểm tra xem một số phần tử của mảng có thỏa mãn điều kiện cho trước không. (trả ra giá trị là true/ false)
+			every(): kiểm tra liệu tất cả các phần tử mảng co thỏa mãn điều kiện cho trước không. (trả ra giá trị là true/ false)
+			
+      filter(): trả về mảng mới chứa các phần tử thỏa mãn điều kiện cho trước.
+			map(): trả về mảng mới từ mảng đã có.-> dùng cho mảng là các numbers.
+			
+      forEach(): duyệt từng phần tử mảng bằng cách gọi hàm cho từng phần tử của mảng.-> dùng cho mảng là các string.
+
+    -->
+    <p id="ketqua"></p>
+    <script type="text/javascript" async defer>
+        var friends = ["Hoang", "Dong", "Nhung", "Hoa", "Trung", "Khoa"];
+        var numbers = [18, 12, -99, 43, 11, 89, 400, 9, 5, 27, 64, 100];
+
+
+        //////////////////////////////////////////////////////
+        var names = "";
+        // friends.forEach(getName);
+
+        // function getName(value, index, arr) {
+        //     names += value + "<br>";
+        // }
+
+
+        //////////////////////////////////////////////////////
+        // var numbers2 = numbers.map(double);
+
+        // function double(value, index, arr) {
+        //     return value * 2;
+        // }
+
+
+        ///////////////////////////////////////////////////
+        // var res = friends.find(nameAfterN);
+
+        // function nameAfterN(value, index, arr) {
+        //     return value >= "N";
+        // }
+
+        ///////////////////////////////////////////////////
+        // var greaterThan80 = numbers.find(findNumber);
+
+        // function findNumber(value, index, arr) {
+        //     return value > 80;
+        // }
+
+
+        //////////////////////////////////////////////////////
+
+        // var result = numbers.every(greaterthan80);
+
+        // function greaterthan80(value, index, arr) {
+        //     return value > 0;
+        // }
+
+        //////////////////////////////////////////////////////
+
+        var newNumber = numbers.filter(greaterThan100);
+
+        function greaterThan50(value, index, arr) {
+            return value > 50;
+        }
+
+        function greaterThan100(value, index, arr) {
+            return value >= 100;
+        }
+
+
+
+        document.getElementById("ketqua").innerHTML = newNumber;
+    </script>
+</body>
+
+</html>

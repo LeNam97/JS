@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <p id="ketqua"></p>
+    <script type="text/javascript" async defer>
+        var brands = "Apple Samsung Oppo Xiaomi Huawei Oppo Bphone";
+
+        //Viết hoa toàn bộ string.
+        //document.getElementById("ketqua").innerHTML = brands.toUpperCase();
+
+        //Viết thường toàn bộ string.
+        //document.getElementById("ketqua").innerHTML = brands.toLowerCase();
+
+        //Tìm kiếm từ (tìm từ trái sang phải)
+        //document.getElementById("ketqua").innerHTML = brands.indexOf("Oppo");
+
+        //Tìm kiếm từ (tìm từ phải sang trái)
+        //document.getElementById("ketqua").innerHTML = brands.lastIndexOf("Oppo");
+
+        //tách thàng các mảng theo dấu hiệu  
+        // var arr = brands.split(' ');
+        // document.getElementById("ketqua").innerHTML = arr + ", type: " + typeof arr;
+
+        //tìm độ dài chuỗi trước và sau khi loại bỏng khoảng trắng đầu cà cuối chuỗi (Loại bỏ khoảng trắng đầu và cuối chuỗi)
+        // document.getElementById("ketqua").innerHTML = brands.length + "<br>" + brands.trim().length;
+
+        //Thay thế bằng replece(old, "new") (/../g," "): thay thế hết tất cả
+        document.getElementById("ketqua").innerHTML = brands.replace(/Oppo/g, "Goole");
+    </script>
+</body>
+
+</html>

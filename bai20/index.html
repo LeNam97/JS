@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <p id="ketqua"></p>
+    <script type="text/javascript" async defer>
+        // push(element):Thêm một phần tử vào cuối mảng.
+        // pop(): xóa phần tử ở cuối mảng.
+
+        // shift(): xóa phần tử ở đầu mảng.
+        // unshift(): thêm phần tử vào đầu mảng.
+
+        // splice(index, num,  ....): thêm hoặc xóa num phần tử từ vị trí index.
+        // concat(): nối hai mảng.
+        // slice(start, to): trích xuất mảng.
+        // join(delim): nối các phần tử của mảng phần tách bới delim.
+        // toString(): trả về danh sách các phần tử mảng ở kiểu string.
+
+        var friends = ["Hoang", "Dung", "Nam", "Do"];
+        //friends.push("Rua Ham"); 
+        //friends.unshift("Anh");
+        // friends.pop();
+        // friends.shift();
+        //friends.splice(3, 0, "Hung", "Yen"); // chèn 2 phần tử vào sau phần tử vị trí thứ 3.
+        var cats = ["trắng", "đen"];
+        var dogs = ["Toan", "Van"];
+
+        var newArr = friends.concat(cats);
+        var str = friends.join(" + ");
+        var otherNewArr = newArr.slice(0, 3); // lấy phần tử vị trí 0 đến trước vị trí 2.
+
+        document.getElementById("ketqua").innerHTML = otherNewArr;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- 
+    Numbers methods
+      -toString(): trả về giá trị ở dạng string.
+      -toFixed(n): làm tròn chữ số phần thập phân.
+      -toPrecision(n): trả về string gồm n chữ số.
+			-number(para): chuyển đổi para thành số nếu có thể. nếu trong chuỗi 
+				var str = "100.25 jhsjdhjsd"; -> không thể chuyển đổi được.
+			-parseInt(str): chuyển đổi string thành số nguyên. xác định giá trị đầu tiên xem có phải là ký tự kiểu số hay không. 
+				var str = "asdsads 100.25"; -> không thể chuyển đổi được.
+      -parseFloat(str): chuyển đổi string thành số thực.
+    Properties:
+      -MAX_VALUE, MIX_VALUE, POSTIVE_INFINITY, NEGATIVE_INDINITY, NaN 
+    -->
+
+
+    <p id="ketqua"></p>
+    <script type="text/javascript" async defer>
+        var x = 100.6945255;
+        var y = x.toString();
+        var str = "100.25";
+
+        document.getElementById("ketqua").innerHTML = Number(str);
+    </script>
+</body>
+
+</html>
